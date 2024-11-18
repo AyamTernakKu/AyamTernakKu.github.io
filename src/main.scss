@@ -27,29 +27,6 @@ body {
   line-height: 1.6;
 }
 
-// Scroll behavior dan smoothing dengan Lenis
-html.lenis,
-html.lenis body {
-  height: auto;
-}
-
-.lenis.lenis-smooth {
-  scroll-behavior: smooth !important;
-  overscroll-behavior-y: contain;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
-}
-
 // Tema tambahan dan responsivitas
 a {
   text-decoration: none;

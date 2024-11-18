@@ -1,11 +1,10 @@
 @use "../../helpers/mixins" as m;
 @use "../../helpers/variables" as v;
 
-@use "./hero/home" as hero;
+@use "./hero/hero" as hero;
 @use "./section/section" as section;
 
 .home {
-  padding: 0 v.$padding-horizontal-main;
 
   .hero {
     @include hero.hero();
