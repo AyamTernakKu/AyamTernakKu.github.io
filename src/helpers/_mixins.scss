@@ -1,3 +1,4 @@
+// Mixin untuk Flexbox
 @mixin flex($align: center, $justify: center, $direction: row) {
   display: flex;
   align-items: $align;
@@ -5,8 +6,37 @@
   flex-direction: $direction;
 }
 
+// Mixin untuk Lingkaran
 @mixin circle($size) {
   width: $size;
   height: $size;
   border-radius: 50%;
+}
+
+// Mixin untuk Tombol dengan Tema AyamTernakKu
+@mixin button($bg-color: map-get($color, "primary-green"), $text-color: map-get($color, "white")) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Mixin untuk Box Shadow
+@mixin box-shadow($color: rgba(0, 0, 0, 0.1)) {
+  box-shadow: 0 4px 8px $color;
+}
+
+// Mixin untuk Text Styling
+@mixin text-style($size: 16px, $weight: 400, $color: map-get($color, "text-gray")) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+  line-height: 1.6;
 }

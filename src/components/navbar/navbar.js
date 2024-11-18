@@ -9,8 +9,7 @@ export async function navbar() {
     }
   });
 
-  // ----- Display Logout Button ----- //
-  const loginCookie = window.Cookies.get("login"); // Access Cookies from window object
+  const loginCookie = window.Cookies.get("login"); 
   const logoutButton = document.querySelector(".nav-others .logout");
   const loginButton = document.querySelector(".nav-others .to-login");
 

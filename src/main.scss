@@ -7,6 +7,7 @@
 
 @use "./pages/home/home";
 
+// Reset CSS
 *,
 *::before,
 *::after {
@@ -15,22 +16,26 @@
   box-sizing: border-box;
 }
 
+// Styling untuk body
 body {
   overflow-y: auto;
   overflow-x: hidden;
   font-size: 1.2vw;
-  font-family: v.$lato;
-  background-color: map-get($map: v.$color, $key: "cream");
+  font-family: v.$poppins;
+  background-color: map-get($map: v.$color, $key: "background-light");
   color: map-get($map: v.$color, $key: "dark-gray");
+  line-height: 1.6;
 }
 
+// Scroll behavior dan smoothing dengan Lenis
 html.lenis,
 html.lenis body {
   height: auto;
 }
 
 .lenis.lenis-smooth {
-  scroll-behavior: auto !important;
+  scroll-behavior: smooth !important;
+  overscroll-behavior-y: contain;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
@@ -43,4 +48,29 @@ html.lenis body {
 
 .lenis.lenis-smooth iframe {
   pointer-events: none;
+}
+
+// Tema tambahan dan responsivitas
+a {
+  text-decoration: none;
+  color: map-get(v.$color, "highlight-green");
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: map-get(v.$color, "secondary-orange");
+  }
+}
+
+button {
+  font-family: v.$poppins;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+// Media query responsivitas
+@media (max-width: 768px) {
+  body {
+    font-size: 3vw;
+  }
 }
