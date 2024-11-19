@@ -3,6 +3,10 @@
 
 @use "./hero/hero" as hero;
 @use "./section/section" as section;
+@use "./partner/partner" as partners;
+@use "./about/about" as about;
+@use "./testimonials/testimonials" as testimonials;
+@use "./team/team" as team;
 
 .home {
 
@@ -11,5 +15,17 @@
   }
   .section{
     @include section.section();
+  }
+  .partner{
+    @include partners.partners();
+  }
+  .about{
+    @include about.about();
+  }
+  .testimonials{
+    @include testimonials.testimonials();
+  }
+  .team{
+    @include team.team();
   }
 }

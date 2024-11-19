@@ -1,0 +1,62 @@
+@use "./../../../helpers/mixins" as m;
+@use "./../../../helpers/variables" as v;
+
+@mixin testimonials() {
+  .testimonials-section {
+    padding: 5vh 10vw;
+    text-align: center;
+    background-color: map-get(v.$color, "background-light");
+
+    .testimonials-container {
+      max-width: 800px;
+      margin: 0 auto;
+
+      .testimonial-title {
+        font-family: v.$poppins;
+        font-size: 1.8vw;
+        font-weight: 700;
+        color: map-get(v.$color, "dark-gray");
+        margin-bottom: 2vh;
+      }
+
+      .testimonial-content {
+        position: relative;
+        font-family: v.$roboto;
+        font-size: 1.2vw;
+        line-height: 1.8;
+        color: map-get(v.$color, "text-gray");
+        margin-bottom: 2vh;
+
+        .quote-left {
+          font-size: 3vw;
+          color: map-get(v.$color, "highlight-green");
+          position: absolute;
+          left: -2vw;
+          top: -1vw;
+        }
+
+        .quote-right {
+          font-size: 3vw;
+          color: map-get(v.$color, "highlight-green");
+          position: absolute;
+          right: -2vw;
+          bottom: -1vw;
+        }
+
+        p {
+          margin: 0 auto;
+          padding: 0 2vw;
+          text-align: justify;
+        }
+      }
+
+      cite {
+        display: block;
+        font-family: v.$poppins;
+        font-size: 1vw;
+        color: map-get(v.$color, "dark-gray");
+        margin-top: 1vh;
+      }
+    }
+  }
+}

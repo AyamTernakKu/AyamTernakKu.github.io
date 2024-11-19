@@ -3,7 +3,8 @@
 
 @mixin partners() {
   text-align: center;
-  padding: v.$padding-horizontal-main 0 0 0;
+  padding: v.$padding-horizontal-main 0;
+  background-color: map-get(v.$color, "light-gray");
 
   .scrolling-logos {
     width: 100%;

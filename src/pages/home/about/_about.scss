@@ -1,0 +1,70 @@
+@use "./../../../helpers/mixins" as m;
+@use "./../../../helpers/variables" as v;
+
+@mixin about() {
+  .highlights-section {
+    padding: 6vh 10vw;
+    background-color: map-get(v.$color, "background-light");
+    text-align: center;
+
+    .section-title {
+      font-family: v.$poppins;
+      font-size: 2vw;
+      font-weight: 700;
+      color: map-get(v.$color, "dark-gray");
+      margin-bottom: 4vh;
+    }
+
+    .highlights-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3vw;
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight-item {
+        padding: 3vh 2vw;
+        background-color: map-get(v.$color, "white");
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 8px;
+          margin-bottom: 1vh;
+        }
+
+        h3 {
+          font-family: v.$poppins;
+          font-size: 1.5vw;
+          font-weight: 600;
+          color: map-get(v.$color, "dark-gray");
+          margin-bottom: 1vh;
+          text-align: center;
+        }
+
+        p {
+          font-family: v.$roboto;
+          font-size: 1vw;
+          color: map-get(v.$color, "text-gray");
+          line-height: 1.8;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
