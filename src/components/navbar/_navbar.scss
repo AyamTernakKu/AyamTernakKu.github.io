@@ -7,7 +7,7 @@
     height: auto;
     padding: 1vw 2vw;
     display: grid;
-    grid-template-columns: 18vw 1fr 18vw;
+    grid-template-columns: 18vw 1fr;
 
     &-logo {
       @include m.flex($justify: flex-start);
