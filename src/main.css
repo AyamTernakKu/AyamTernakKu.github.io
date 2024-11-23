@@ -542,6 +542,91 @@
   color: #595959;
   line-height: 1.6;
 }
+.home .faq .faq-section {
+  text-align: center;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+.home .faq .faq-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.home .faq .faq-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+.home .faq .faq-section .faq-search {
+  margin-bottom: 2rem;
+}
+.home .faq .faq-section .faq-search input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.home .faq .faq-section .faq-search input:focus {
+  border-color: #007bff;
+}
+.home .faq .faq-section .faq-items {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
+}
+.home .faq .faq-section .faq-items .faq-item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.home .faq .faq-section .faq-items .faq-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.home .faq .faq-section .faq-items .faq-item .faq-question {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home .faq .faq-section .faq-items .faq-item .faq-question .faq-toggle {
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.home .faq .faq-section .faq-items .faq-item .faq-question .faq-toggle:hover {
+  transform: scale(1.1);
+}
+.home .faq .faq-section .faq-items .faq-item .faq-answer {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+.home .faq .faq-section .faq-items .faq-item.active .faq-answer {
+  max-height: 500px;
+}
 
 *,
 *::before,
